@@ -1,0 +1,80 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- red container div -->
+  
+
+  <div class="container">
+    <div class="small-container">   
+      <div class="player-health">
+        <div class="player-health-bar"></div>
+        <div id="playerHealth" class="player-health-fill"></div>
+      </div>
+      <div id="timer" class="timer">10</div>
+      <div class="enemy-health">
+        <div class="enemy-health-bar"></div>
+        <div id="enemyHealth" class="enemy-health-fill"></div>
+      </div>
+   
+    </div>
+  
+    <div id="displayText" class="display-text">Tie</div>
+    
+    <canvas></canvas>
+  
+    <!-- Imagen por defecto -->
+  </div>
+  
+  <div id="scoreContainer" class="score-container">
+      <div class="player-score">
+        <span class="score-label">Player 1 Score:</span>
+        <span id="playerScore" class="score-value">0</span>
+      </div>
+    <div class="enemy-score">
+      <span class="score-label">player 2 Score:</span>
+      <span id="enemyScore" class="score-value">0</span>
+    </div>
+  </div>
+
+  <div id="boton-container">
+    <button onclick="animate()">
+      <i class="fas fa-play"></i> <!-- Icono de play -->
+    </button>
+    <button id="reset-button">
+      <i class="fas fa-sync-alt"></i> <!-- Icono de stop -->
+    </button>
+    <button onclick="openModal()">
+      Historia
+    </button>
+  </div>
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+  
+
+  
+
+  
+  
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="js/utils.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="index.js"></script>
+</body>
